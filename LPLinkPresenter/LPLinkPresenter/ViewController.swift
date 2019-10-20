@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var metaData = LPLinkMetadata() {
         didSet {
-            tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 
@@ -24,7 +26,7 @@ class ViewController: UIViewController {
             let metadataProvider = LPMetadataProvider()
             guard let url = URL(string: "https://github.com/kimhyeri") else { return }
             metadataProvider.startFetchingMetadata(for: url) { (metadata, error) in
-                guard let data = metadata, error != nil else { 
+                guard let data = metadata, error == nil else { 
                     return 
                 }
                 self.metaData = data
