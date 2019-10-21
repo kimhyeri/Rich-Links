@@ -1,6 +1,6 @@
 # Rich-Links
 
-## WWDC 2019
+## [WWDC 2019 - Embedding and Sharing Visually Rich Links](https://developer.apple.com/documentation/linkpresentation)
 > Embedding and Sharing Visually Rich Links
 - LinkPresentation 프레임 워크를 통해 앱 개발자는 풍부하고 아름답고 일관된 방식으로 URL을 쉽게 제시 할 수 있으며, LinkPresentation을 사용하여 URL에서 메타 데이터를 검색하고 앱 내부에 풍부한 링크 컨텐츠를 제공할 수 있다.
 
@@ -35,6 +35,4 @@ let url = URL(string: "https://www.apple.com/ipad")!
 ![ ](./image/1.PNG)
 ![ ](./image/2.PNG)
 
-
-### [WWDC 2019 - Embedding and Sharing Visually Rich Links](https://developer.apple.com/documentation/linkpresentation)
-### [Practice](https://hyerios.tistory.com/78)
+### [Practice 👊](https://hyerios.tistory.com/78)
