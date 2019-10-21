@@ -32,8 +32,8 @@ let url = URL(string: "https://www.apple.com/ipad")!
     -  에러 발생 (30초) ``` Could not signal service com.apple.WebKit.WebContent: 113: Could not find specified service ```
 
 ## Using LinkPresentation Framework
-![ ](./image/1.png)
-![ ](./image/2.png)
+![ ](./image/1.PNG)
+![ ](./image/2.PNG)
 
 
 ### [WWDC 2019 - Embedding and Sharing Visually Rich Links](https://developer.apple.com/documentation/linkpresentation)
