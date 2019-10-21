@@ -13,6 +13,7 @@
 		6A126ABA235781F60067993E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A126AB9235781F60067993E /* Assets.xcassets */; };
 		6A126ABD235781F60067993E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A126ABB235781F60067993E /* LaunchScreen.storyboard */; };
 		6A32787A235C5CA900BB6AF4 /* RichTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A327879235C5CA900BB6AF4 /* RichTableViewCell.swift */; };
+		6A32787E235DB2A700BB6AF4 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A32787D235DB2A700BB6AF4 /* URLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6A126ABC235781F60067993E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A126ABE235781F60067993E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A327879235C5CA900BB6AF4 /* RichTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTableViewCell.swift; sourceTree = "<group>"; };
+		6A32787D235DB2A700BB6AF4 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				6A126AB2235781F00067993E /* AppDelegate.swift */,
 				6A126AB4235781F00067993E /* ViewController.swift */,
+				6A32787D235DB2A700BB6AF4 /* URLs.swift */,
 				6A327879235C5CA900BB6AF4 /* RichTableViewCell.swift */,
 				6A126AB6235781F00067993E /* Main.storyboard */,
 				6A126AB9235781F60067993E /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				6A126AB5235781F00067993E /* ViewController.swift in Sources */,
 				6A126AB3235781F00067993E /* AppDelegate.swift in Sources */,
 				6A32787A235C5CA900BB6AF4 /* RichTableViewCell.swift in Sources */,
+				6A32787E235DB2A700BB6AF4 /* URLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

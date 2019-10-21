@@ -37,3 +37,4 @@ let url = URL(string: "https://www.apple.com/ipad")!
 
 
 ### [WWDC 2019 - Embedding and Sharing Visually Rich Links](https://developer.apple.com/documentation/linkpresentation)
+### [Practice](https://hyerios.tistory.com/78)

@@ -10,9 +10,7 @@ import UIKit
 
 class RichTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var RichImageView: UIImageView!
+    @IBOutlet weak var richView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +22,4 @@ class RichTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

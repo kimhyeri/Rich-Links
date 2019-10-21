@@ -12,30 +12,35 @@ import LinkPresentation
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var metaData = LPLinkMetadata() {
+    
+    private var metaData: LPLinkMetadata = LPLinkMetadata() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 13.0, *) {
-            let metadataProvider = LPMetadataProvider()
-            guard let url = URL(string: "https://github.com/kimhyeri") else { return }
-            metadataProvider.startFetchingMetadata(for: url) { (metadata, error) in
-                guard let data = metadata, error == nil else { 
-                    return 
-                }
-                self.metaData = data
-            }
-        } else {
-            print("This device cannot support linkPresentation")
-            // Fallback on earlier versions
-        }
+
+        fetchURLPreview()
+    }
     
+    private func fetchURLPreview() {
+        // #available(iOS 13.0, *)
+        
+        let metadataProvider = LPMetadataProvider()
+        guard let urlString = URLs.recipesArray.first, let url = URL(string: urlString) else { 
+            return 
+        }
+        
+        metadataProvider.startFetchingMetadata(for: url) { (metadata, error) in
+            guard let data = metadata, error == nil else { 
+                return 
+            }
+            self.metaData = data
+        }
     }
 }
 
@@ -48,7 +53,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? RichTableViewCell else { 
             return UITableViewCell()
         }
-        cell.titleLabel.text = metaData.title
+        
+        let linkView = LPLinkView(metadata: metaData)
+        cell.richView.addSubview(linkView)
+        linkView.frame.size = cell.richView.frame.size    
+        linkView.sizeToFit()
+        
         return cell
     }
 }
